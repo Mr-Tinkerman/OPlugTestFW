@@ -7,7 +7,7 @@ make this public for others looking for a small and simple test framework. As
 this is still in heavy development, expect breaking changes until I declare it
 to be officially been released.
 
-===============================================================================
+-------------------------------------------------------------------------------
 
 ### Installation
 
