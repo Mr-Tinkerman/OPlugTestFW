@@ -1,0 +1,12 @@
+set(TEST_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
+
+function(add_oplugtest TEST_GROUP TEST)
+	string(REGEX REPLACE "\\.[^.]*$" "" TEST_BN ${TEST})
+	add_executable(${TEST_BN} ${TEST_MODULE_PATH}/testMain.cpp ${TEST})
+	target_include_directories(${TEST_BN} PRIVATE ${TEST_MODULE_PATH})
+	if (NOT TARGET ${TEST_GROUP})
+		add_executable(${TEST_GROUP})
+		target_include_directories(${TEST_GROUP} PRIVATE ${TEST_MODULE_PATH})
+	endif()
+		target_sources(${TEST_GROUP} PRIVATE ${TEST_MODULE_PATH}/testMain.cpp ${TEST})
+endfunction()
