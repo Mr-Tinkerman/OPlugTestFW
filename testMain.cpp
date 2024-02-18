@@ -5,14 +5,14 @@
 
 int main()
 {
-	if (TestQueue::unitTestQueue.size() < 1)
+	if (UNIT_TestQueue::UNIT_testQueue.size() < 1)
 		std::cout << "No tests to run!\n";
-	if (TestQueue::unitTestQueue.size() > 1)
+	if (UNIT_TestQueue::UNIT_testQueue.size() > 1)
 		std::cout << "Running Unit Tests:\n\n";
 	
-	for (int i = 0; i < TestQueue::unitTestQueue.size(); i++)
+	for (int i = 0; i < UNIT_TestQueue::UNIT_testQueue.size(); i++)
 	{
-		TestQueue::unitTestQueue[i]();
+		UNIT_TestQueue::UNIT_testQueue[i]();
 		std::cout << '\n';
 	}
 }
